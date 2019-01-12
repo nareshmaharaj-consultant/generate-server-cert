@@ -1,0 +1,3 @@
+openssl genrsa -out server1/server1.key 4096
+openssl req -new -key server1/server1.key -out server1/server1.csr -config server1/openssl.server1.cnf
+openssl x509 -req -days 365 -in server1/server1.csr -CA mongodb-ca.crt -CAkey mongodb-ca.key -CAcreateserial -out server1/server1.crt -extfile server1/openssl.server1.cnf -extensions v3_req
