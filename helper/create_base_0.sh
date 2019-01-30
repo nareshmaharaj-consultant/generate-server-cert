@@ -26,7 +26,7 @@ echo -e "\n[ alt_names ]" >> $1/openssl.server.cnf
 COUNTER=1
   until [  $COUNTER -gt $count ]; do
   name=${dns_name_arr[$COUNTER-1]}
-    echo "$COUNTER $name"
+    echo "DNS.$COUNTER = $name"
     echo "DNS.$COUNTER = $name" >> $1/openssl.server.cnf
     let COUNTER+=1
   done
