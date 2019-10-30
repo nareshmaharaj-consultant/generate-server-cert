@@ -1,4 +1,4 @@
-USGAE="create_base.sh name dnsList"
+USGAE="create_base.sh server_name [csv list of Subject Alternative Name SAN]"
 #create_base.sh host1 simple.host.com,simple,simple.com
 
 if [ -z "$1" ]
@@ -9,7 +9,7 @@ fi
 
 if [ -z "$2" ]
   then
-    echo "DNS names separated by comma i.e. p1.com,p1,q1 - $USAGE"
+    echo "Subject Alternative Name SAN - separated by comma i.e. p1.com,p1,q1 - $USAGE"
     exit 0
 fi
 
